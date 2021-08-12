@@ -20,7 +20,7 @@ const main = async () => {
     const label = core.getInput('label', { required: true });
     const comment = core.getInput('comment');
 
-    if (currentLabel === label) {
+    // if (currentLabel === label) {    //改成无条件邀请
       try {
         await octokit.orgs.checkMembership({
           org,
@@ -49,7 +49,7 @@ const main = async () => {
           state: 'closed',
         });
       }
-    }
+    // }
   } catch (error) {
     return core.setFailed(error.message);
   }
