@@ -14,10 +14,10 @@ const main = async () => {
 
     const { payload } = github.context;
     const inviteeId = payload.issue.user.id;
-    const currentLabel = payload.label.name;
+    // const currentLabel = payload.label.name;
 
     const org = core.getInput('organization', { required: true });
-    const label = core.getInput('label', { required: true });
+    // const label = core.getInput('label', { required: true });
     const comment = core.getInput('comment');
 
     // if (currentLabel === label) {    //改成无条件邀请
